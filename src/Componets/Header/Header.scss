@@ -1,0 +1,103 @@
+.header {
+  min-height: 18rem;
+  background-image: url("../../images/bg-desktop-light.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #222;
+  padding-top: 5rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--DarkGrayishBlue);
+  .todo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .todo-text {
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+    }
+  }
+  .create {
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    margin-top: 3rem;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    .check-circle {
+      flex-grow: 0;
+      flex-shrink: 0;
+      display: inline-block;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid var(--LightGrayishBlue);
+    }
+    .add-task-icon {
+      border-radius: 50%;
+      border: 1px solid var(--VeryDarkGrayishBlue);
+      font-size: 1rem;
+      transform: scale(1.2);
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 1.2rem;
+      height: 1.2rem;
+      color: var(--VeryDarkGrayishBlue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s all ease-in-out;
+      &:hover {
+        transform: scale(1.6);
+        cursor: pointer;
+        background-color: var(--LightGrayishBlue--hover);
+        border-color: var(--LightGrayishBlue--hover);
+        color: var(--VeryDarkGrayishBlue);
+        transition: 0.3s all ease-in-out;
+      }
+    }
+    input {
+      border: none;
+      height: max-content;
+      width: 100%;
+      background-color: transparent;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.dark .header {
+  background-image: url("../../images/bg-desktop-dark.jpg");
+  background-color: #222;
+  color: var(--DarkGrayishBlue);
+  .todo {
+    .todo-text {
+      color: white;
+    }
+  }
+  .create {
+    background-color: var(--VeryDarkDesaturatedBlue);
+    input {
+      color: var(--LightGrayishBlue--hover);
+      &:focus {
+        outline: none;
+      }
+    }
+    .check-circle {
+      border: 1px solid var(--VeryDarkGrayishBlue);
+    }
+    .add-task-icon {
+      color: #eee;
+      border-color: #eee;
+      &:hover {
+        color: var(--VeryDarkDesaturatedBlue);
+      }
+    }
+  }
+}

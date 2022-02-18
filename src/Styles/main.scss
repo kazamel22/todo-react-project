@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+:root {
+  // Colors
+  // Primary
+  --BrightBlue: hsl(220, 98%, 61%);
+  --CheckBackground: linear-gradient(
+    0deg,
+    hsl(192, 100%, 67%) 0%,
+    hsl(280, 87%, 65%) 100%
+  );
+  //Light Theme
+
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+  --LightGrayishBlue: hsl(233, 11%, 84%);
+  --DarkGrayishBlue: hsl(236, 9%, 61%);
+  --VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+  // Dark Theme
+  --VeryDarkBlue: hsl(235, 21%, 11%);
+  --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+  --LightGrayishBlue: hsl(234, 39%, 85%);
+  --LightGrayishBlue--hover: hsl(236, 33%, 92%);
+  --DarkGrayishBlue: hsl(234, 11%, 52%);
+  --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+  --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+
+  --radius: 0.3rem;
+  --box-shadow: 0 0 2rem 1rem #22222211, 0 0 0.5rem 0rem #22222233;
+  --min-list-height: 25rem;
+  --transition: 1s all ease-in-out;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: var(--transition);
+}
+body {
+  font-size: 17px;
+  font-weight: 400;
+  * {
+    font-family: "Josefin Sans", sans-serif;
+  }
+}
+body.dark {
+  background-color: var(--VeryDarkBlue);
+}
+
+.container {
+  width: 90%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--CheckBackground);
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+.dark ::-webkit-scrollbar-track {
+  background: var(--VeryDarkDesaturatedBlue);
+}
+
+.drag {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--DarkGrayishBlue);
+}
